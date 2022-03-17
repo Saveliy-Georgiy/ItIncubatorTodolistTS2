@@ -28,7 +28,7 @@ export const TaskRedux = React.memo(({taskId, todolistId}: TaskReduxPropsType) =
         dispatch(changeTaskTitleAC(todolistId, taskId, newValue))
     }, [dispatch, changeTaskTitleAC])
 
-    const onClickHandler = useCallback(() => dispatch(removeTaskAC(taskId, todolistId)), [dispatch, removeTaskAC])
+    const onClickHandler = useCallback(() => dispatch(removeTaskAC(todolistId, taskId)), [dispatch, removeTaskAC])
 
     return <div className={task.isDone ? "is-done" : ""}>
         <Checkbox
