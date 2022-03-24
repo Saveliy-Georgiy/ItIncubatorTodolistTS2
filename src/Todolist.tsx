@@ -75,7 +75,7 @@ export const Todolist = React.memo(function (props: PropsType) {
         <div style={{paddingTop: '10px'}}>
             <Button variant={props.filter === 'all' ? 'outlined' : 'text'}
                     onClick={onAllClickHandler}
-                    color={'default'}
+                    color={'inherit'}
             >All
             </Button>
             <Button variant={props.filter === 'active' ? 'outlined' : 'text'}
