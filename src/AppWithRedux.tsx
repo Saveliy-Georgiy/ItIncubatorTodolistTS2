@@ -81,7 +81,7 @@ function AppWithRedux() {
             </AppBar>
             <Container fixed>
                 <Grid container style={{padding: "20px"}}>
-                    <AddItemForm callBack={addTodolist}/></Grid>
+                    <AddItemForm addItem={addTodolist}/></Grid>
                 <Grid container spacing={3}>
                     {
                         todolists.map(tl => {
@@ -97,8 +97,8 @@ function AppWithRedux() {
                                         addTask={addTask}
                                         changeTaskStatus={changeStatus}
                                         filter={tl.filter}
-                                        editTitleTodolist={editTitleTodolist}
-                                        editTitleTask={editTitleTask}
+                                        changeTodolistTitle={editTitleTodolist}
+                                        changeTaskTitle={editTitleTask}
                                     />
                                 </Paper>
                             </Grid>
